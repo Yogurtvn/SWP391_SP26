@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using RepositoryLayer.Data;
-using RepositoryLayer.DependencyInjection;
+using ServiceLayer.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddRepositoryLayer(builder.Configuration);
+builder.Services.AddServiceLayer(builder.Configuration);
 
 var app = builder.Build();
 
